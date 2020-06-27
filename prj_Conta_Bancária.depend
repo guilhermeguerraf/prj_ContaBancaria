@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1593271178 source:f:\análise e desenvolvimento de sistemas\2º semestre\linguagem de programação\prj_conta_bancária\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	"cliente.h"
+
+1593272242 f:\análise e desenvolvimento de sistemas\2º semestre\linguagem de programação\prj_conta_bancária\cliente.h
+
+1593269936 source:f:\análise e desenvolvimento de sistemas\2º semestre\linguagem de programação\prj_conta_bancária\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cliente.h"
+
