@@ -9,24 +9,21 @@ int main()
     inicializarVetor();
     do{
         imprimirMenuPrincipal();
-        printf("  Escolha sua opcao: ");
-        scanf("%d", &escolhaMenu);
+        escolhaMenu = lerEscolha();
         switch(escolhaMenu){
             case 1:
-                system("cls");
-                printf("\n\tCADASTRO\n\n");
                 cadastroCliente(posicaoVetor);
+                posicaoVetor++;
                 break;
             case 2:
-                MenuContaCliente();
+                acessoContaCliente();
                 break;
             case 9:
                 printf("\n\n  Saindo...\n");
-                break;
+                exit(0);
             default:
-                printf("\n  Opcao invalida!\n");
+                printf("\n  Opcao invalida!\n\n");
                 system("pause");
-                main();
                 break;
         }
     }while(escolhaMenu!=9);
