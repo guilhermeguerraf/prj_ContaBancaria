@@ -4,28 +4,31 @@
 
 int main()
 {
-    int posicaoVetor=0;
-    int escolhaMenu=0;
+    verificarAberturaArquivos();
     inicializarVetor();
+    int posicaoVetor;
+    posicaoVetor = encontrarPosicaoVazia();
+    int escolha;
     do{
         imprimirMenuPrincipal();
-        escolhaMenu = lerEscolha();
-        switch(escolhaMenu){
+        escolha = lerEscolha();
+        switch(escolha){
             case 1:
-                cadastroCliente(posicaoVetor);
+                cadastrarNovoCliente(posicaoVetor);
                 posicaoVetor++;
                 break;
             case 2:
-                acessoContaCliente();
+                acessarContaCliente();
                 break;
             case 9:
                 printf("\n\n  Saindo...\n");
+
                 exit(0);
             default:
                 printf("\n  Opcao invalida!\n\n");
                 system("pause");
                 break;
         }
-    }while(escolhaMenu!=9);
+    }while(escolha!=9);
     return 0;
 }

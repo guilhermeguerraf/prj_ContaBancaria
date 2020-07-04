@@ -1,31 +1,42 @@
 /* Definindo o tamanho do vetor para 100 clientes */
 #define T 100
 
-/* Criando um ponteiro para evitar consumo excessivo de memória do tipo struct Aluno */
-typedef struct ContaCliente *p_contaCliente;
+FILE *clientes;
 
-/* Definindo um vetor vCliente do tipo struct Cliente para armazenar ponteiro  */
-p_contaCliente vContaCliente[T];
+FILE *fContaClientes;
 
+FILE *transacoes;
+
+typedef struct ContaCliente *p_contasCliente;
+
+p_contasCliente vContasCliente[T];
+
+void verificarAberturaArquivos();
 /* Inicializar o vetor com NULL para desalocar os lixos da memória */
 void inicializarVetor();
+
+int encontrarPosicaoVazia();
 
 void imprimirMenuPrincipal();
 
 int lerEscolha();
 
-void cadastroCliente(int posicao);
-
 void imprimirAviso();
 
-void acessoContaCliente();
+void cadastrarNovoCliente(int posicao);
 
-void MenuContaCliente(int posicao);
+int criarNumeroContaCliente(char *numero_cpf);
 
-void imprimirMenuContaCliente(int posicao);
+void acessarContaCliente();
 
-void fazerDeposito(int posicao);
+void acessarCPF(char *cpf);
 
-void fazerSaque(int posicao);
+void MenuContaCliente(char *nome, int nConta, char *cpf);
 
-void exibirSaldo(int posicao);
+void imprimirMenuContaCliente();
+
+float fazerDeposito();
+
+float fazerSaque();
+
+void exibirSaldo(float valor);
